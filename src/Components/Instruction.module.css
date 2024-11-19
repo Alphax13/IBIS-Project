@@ -1,0 +1,101 @@
+.patterns {
+    background: #FFFFFF;
+    padding: 20px;
+
+    position: relative;
+    overflow: visible;
+    z-index: 2;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -8%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url('../img/clouds2.png');
+        background-size: cover;
+        height: 100px;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .readyTitle {
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #E20026;
+        text-align: center;
+        margin-top: 3rem;
+        position: relative;
+
+        .highlight {
+            -webkit-text-stroke: 1px #E20026;
+            -webkit-text-fill-color: transparent;
+        }
+
+        img {
+            position: absolute;
+            width: 100px;
+            bottom: -50px;
+            left: 65px;
+        }
+    }
+
+    .howToPlay {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #arrow {
+            width: 20px;
+            margin: 60px 0 ;
+        }
+    }
+
+
+    .contents {
+        display: grid;
+
+        #move {
+            width: 100px;
+            transform: translate(100%, 0);
+        }
+
+        .section {
+            margin: 20px 0;
+            position: relative;
+            display: grid;
+            align-items: center;
+            gap: 10px;
+
+            &:nth-child(2n-1) {
+                grid-template-columns: 2fr 1fr;
+            }
+
+            &:nth-child(2n) {
+                grid-template-columns: 1fr 2fr;
+            }
+
+            .topic {
+                h3 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #000;
+                }
+
+                p {
+                    font-size: 17px;
+                }
+            }
+
+
+            .patternImage,
+            .startButtonImage,
+            .arScanningImage {
+                margin-top: 20px;
+            }
+        }
+    }
+
+}

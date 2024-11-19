@@ -1,0 +1,43 @@
+.scanner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.scanner-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.scanner-frame {
+    width: 320px;
+    height: 320px;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.switch-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #E20026;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.switch-button:hover {
+    background-color: #AC001D;
+}
+.switch-button:active {
+    transform: scale(0.9);
+}

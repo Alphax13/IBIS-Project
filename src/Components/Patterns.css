@@ -1,0 +1,125 @@
+.patterns {
+  background: linear-gradient(to top, #e0f4ff, white);
+  padding: 20px;
+  margin-top: 3rem;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.pattern {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 15px;
+}
+
+.patterns::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../img/bgtime.png');
+  background-position: center;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: -5;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.ready-title {
+  margin-top: 10%;
+  font-size: 38px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #E20026;
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 80px;
+    bottom: -40px;
+    left: 70px;
+  }
+}
+
+.ready-title .highlight {
+  -webkit-text-stroke: 1px #E20026;
+  -webkit-text-fill-color: transparent;
+}
+
+.pattern-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+
+.pattern-image {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.pattern-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.play-pattern {
+  background-color: #E20026;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 4px 4px 0px 0px #FFFFFF;
+  transition: all 0.05s;
+
+  .icon {
+    width: 30px;
+  }
+}
+
+.play-pattern:active {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+
+.play-pattern-disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.play-again-text {
+  font-size: 16px;
+  color: #666;
+}

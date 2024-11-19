@@ -1,0 +1,364 @@
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
+    .modal-content {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        width: 500px;
+        z-index: 5;
+
+        .modal-icon {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            height: 100px;
+        }
+
+        .modal-text {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .modal-close-button {
+            padding: 10px 20px;
+            font-size: 28px;
+            background-color: #E20026;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .modal-close-button:hover {
+            background-color: #AC001D;
+        }
+    
+        .modal-close-button:active {
+            transform: scale(0.9);
+        }
+    }
+}
+
+.timer-container {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    gap: 100px;
+
+    .progress-ring {
+        position: relative;
+        width: 320px;
+        height: 320px;
+        display: flex;
+
+
+        .progress {
+            transition: stroke-dashoffset 1s linear;
+        }
+
+        .timer-text {
+            position: absolute;
+            font-size: 120px;
+            color: #E20026;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .start-button {
+        padding: 10px 20px;
+        font-size: 32px;
+        background-color: #E20026;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        font-weight: bold;
+    }
+
+    .start-button:hover {
+        background-color: #AC001D;
+    }
+
+    .start-button:active {
+        transform: scale(0.9);
+    }
+
+    .done-button {
+        padding: 10px 20px;
+        font-size: 32px;
+        background-color: #fff;
+        color: #E20026;
+        border: 4px solid #E20026;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        font-weight: bold;
+    }
+
+    .done-button:hover {
+        color: #AC001D;
+        border: 3px solid #AC001D;
+    }
+
+    .done-button:active {
+        transform: scale(0.9);
+    }
+}
+
+.time-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+    text-align: center;
+    gap: 40px;
+
+    .bell-icon {
+        width: 250px;
+    }
+
+    .time-up-text {
+        font-size: 72px;
+        font-weight: bold;
+        color: white;
+        -webkit-text-stroke: 16px #E20026;
+        paint-order: stroke fill;
+        letter-spacing: 1px;
+    }
+
+    .scan-share-button {
+        background-color: #E20026;
+        color: #fff;
+        padding: 50px 50px;
+        font-size: 36px;
+        border: none;
+        border-radius: 500px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: transform 0.2s ease;
+    }
+
+    .scan-share-button:hover {
+        background-color: #AC001D;
+    }
+
+    .scan-share-button:active {
+        transform: scale(0.9);
+    }
+
+    .redeem-text {
+        font-size: 24px;
+        color: #E20026;
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+
+@media (max-width: 450px) {
+    .modal-overlay {
+
+        .modal-content {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 350px;
+
+            .modal-icon {
+                margin-bottom: 20px;
+                height: 80px;
+            }
+
+            .modal-text {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .modal-close-button {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .time-up-container {
+        gap: 40px;
+
+        .bell-icon {
+            width: 200px;
+        }
+
+        .time-up-text {
+            font-size: 45px;
+            -webkit-text-stroke: 8px #E20026;
+            letter-spacing: 1px;
+        }
+
+        .scan-share-button {
+            font-size: 36px;
+            border: none;
+            border-radius: 500px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .redeem-text {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .modal-overlay {
+        .modal-content {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 350px;
+
+            .modal-icon {
+                margin-bottom: 20px;
+                height: 80px;
+            }
+
+            .modal-text {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .modal-close-button {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .time-up-container {
+        gap: 40px;
+
+        .bell-icon {
+            width: 150px;
+        }
+
+        .time-up-text {
+            font-size: 40px;
+            -webkit-text-stroke: 8px #E20026;
+            letter-spacing: 1px;
+        }
+
+        .scan-share-button {
+            font-size: 30px;
+            border: none;
+            border-radius: 500px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .redeem-text {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .modal-overlay {
+        .modal-content {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+
+            .modal-icon {
+                margin-bottom: 20px;
+                height: 50px;
+            }
+
+            .modal-text {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .modal-close-button {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .timer-container {
+        gap: 50px;
+    
+        .progress-ring {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            display: flex;
+    
+    
+            .progress {
+                transition: stroke-dashoffset 1s linear;
+            }
+    
+            .timer-text {
+                position: absolute;
+                font-size: 120px;
+                color: #E20026;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    
+        .start-button {
+            padding: 10px 20px;
+            font-size: 28px;
+            background-color: #E20026;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .time-up-container {
+        gap: 20px;
+
+        .bell-icon {
+            width: 100px;
+        }
+
+        .time-up-text {
+            font-size: 28px;
+            -webkit-text-stroke: 8px #E20026;
+            letter-spacing: 1px;
+        }
+
+        .scan-share-button {
+            font-size: 20px;
+            border: none;
+            border-radius: 500px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .redeem-text {
+            font-size: 14px;
+        }
+    }
+}
